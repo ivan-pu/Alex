@@ -9,6 +9,8 @@ public class Interactor : MonoBehaviour
     private GameObject interactText;
     private GameObject itembeinginteracted;
 
+    private bool forcedclose;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +23,16 @@ public class Interactor : MonoBehaviour
         RaycastHit hit;
 
         if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2, Interactable)){
-            interactText.SetActive(true);
+            
+            if (!forcedclose){
+                interactText.SetActive(true);
+            }
             itembeinginteracted = hit.collider.gameObject;
             if (hit.collider.GetComponent<Interactable>() != false){
                 if (Input.GetKeyDown(KeyCode.E)){
                     hit.collider.GetComponent<Interactable>().interacted = true;
+                    interactText.SetActive(false);
+                    forcedclose = true;
                 }
             }
         }
@@ -33,6 +40,7 @@ public class Interactor : MonoBehaviour
             if (itembeinginteracted != null && itembeinginteracted.GetComponent<Interactable>() != false){
                 itembeinginteracted.GetComponent<Interactable>().interacted = false;
                 itembeinginteracted = null;
+                forcedclose = false;
             }
             interactText.SetActive(false);
         }
