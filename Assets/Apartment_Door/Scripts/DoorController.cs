@@ -3,17 +3,13 @@ using UnityEngine.UI;
 
 public class DoorController : MonoBehaviour
 {
-    public bool gotKey;                  //Has the player acquired key
+    public static bool gotKey;
 
     private Animation doorAnim;
-    private BoxCollider doorCollider;           //To enable the player to go through the door if door is opened else block him
+    private BoxCollider doorCollider;
 
     private bool doorOpened;
 
-
-    /// <summary>
-    /// Initial State of every variables
-    /// </summary>
     private void Start()
     {
         gotKey = false;
@@ -30,6 +26,7 @@ public class DoorController : MonoBehaviour
         {
             doorAnim.Play("Door_Open");
             doorOpened = true;
+            doorCollider.enabled = false;
         }
     }
 }

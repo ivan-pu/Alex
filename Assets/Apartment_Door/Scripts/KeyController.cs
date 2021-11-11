@@ -25,7 +25,7 @@ public class KeyController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            DC.gotKey = true;
+            DoorController.gotKey = true;
             txtToDisplay.gameObject.SetActive(true);
             txtToDisplay.text = "Key Acquired";
             this.gameObject.SetActive(false);

@@ -19,5 +19,8 @@ public class NumboxController : MonoBehaviour
             thenumber = thenumber.Substring(0, 4);
         }
         this.gameObject.GetComponent<TextMeshPro>().text = thenumber;
+        if (thenumber == "0907"){
+            DoorController.gotKey = true;
+        }
     }
 }
