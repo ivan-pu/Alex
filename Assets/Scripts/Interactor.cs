@@ -14,7 +14,7 @@ public class Interactor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -22,22 +22,28 @@ public class Interactor : MonoBehaviour
     {
         RaycastHit hit;
 
-        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2, Interactable)){
-            
-            if (!forcedclose){
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2, Interactable))
+        {
+
+            if (!forcedclose)
+            {
                 interactText.SetActive(true);
             }
             itembeinginteracted = hit.collider.gameObject;
-            if (hit.collider.GetComponent<Interactable>() != false){
-                if (Input.GetKeyDown(KeyCode.E)){
+            if (hit.collider.GetComponent<Interactable>() != false)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
                     hit.collider.GetComponent<Interactable>().interacted = true;
                     interactText.SetActive(false);
                     forcedclose = true;
                 }
             }
         }
-        else{
-            if (itembeinginteracted != null && itembeinginteracted.GetComponent<Interactable>() != false){
+        else
+        {
+            if (itembeinginteracted != null && itembeinginteracted.GetComponent<Interactable>() != false)
+            {
                 itembeinginteracted.GetComponent<Interactable>().interacted = false;
                 itembeinginteracted = null;
                 forcedclose = false;
