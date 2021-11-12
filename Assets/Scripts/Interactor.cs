@@ -7,9 +7,9 @@ public class Interactor : MonoBehaviour
     public LayerMask Interactable = 8;
     [SerializeField]
     private GameObject interactText;
-    private GameObject itembeinginteracted;
+    private GameObject itemBeingInteracted;
 
-    private bool forcedclose;
+    private bool turnoffInttext;
 
     // Start is called before the first frame update
     void Start()
@@ -25,28 +25,28 @@ public class Interactor : MonoBehaviour
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2, Interactable))
         {
 
-            if (!forcedclose)
+            if (!turnoffInttext)
             {
                 interactText.SetActive(true);
             }
-            itembeinginteracted = hit.collider.gameObject;
-            if (hit.collider.GetComponent<Interactable>() != false)
+            itemBeingInteracted = hit.collider.gameObject;
+            if (itemBeingInteracted.GetComponent<Interactable>() != false)
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     hit.collider.GetComponent<Interactable>().interacted = true;
                     interactText.SetActive(false);
-                    forcedclose = true;
+                    turnoffInttext = true;
                 }
             }
         }
         else
         {
-            if (itembeinginteracted != null && itembeinginteracted.GetComponent<Interactable>() != false)
+            if (itemBeingInteracted != null && itemBeingInteracted.GetComponent<Interactable>() != false)
             {
-                itembeinginteracted.GetComponent<Interactable>().interacted = false;
-                itembeinginteracted = null;
-                forcedclose = false;
+                itemBeingInteracted.GetComponent<Interactable>().interacted = false;
+                itemBeingInteracted = null;
+                turnoffInttext = false;
             }
             interactText.SetActive(false);
         }
