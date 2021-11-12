@@ -17,7 +17,8 @@ public class PhoneUI : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Camera.main.GetComponent<FirstPersonLook>().enabled = false;
-            Camera.main.GetComponentInParent<FirstPersonMovement>().enabled = false;
+            Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            Camera.main.GetComponentInParent<Crouch>().enabled = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E)){
@@ -29,7 +30,8 @@ public class PhoneUI : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Camera.main.GetComponent<FirstPersonLook>().enabled = true;
-        Camera.main.GetComponentInParent<FirstPersonMovement>().enabled = true;
+        Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
+        Camera.main.GetComponentInParent<Crouch>().enabled = true;
         GameObject.Find("Phone").GetComponent<Interactable>().interacted = false;
         gameObject.SetActive(false);
     }
