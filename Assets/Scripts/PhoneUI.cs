@@ -32,7 +32,7 @@ public class PhoneUI : MonoBehaviour
         Camera.main.GetComponent<FirstPersonLook>().enabled = true;
         Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
         Camera.main.GetComponentInParent<Crouch>().enabled = true;
-        GameObject.Find("Phone").GetComponent<Interactable>().interacted = false;
+        GameObject.Find("Boy's Phone").GetComponent<Interactable>().interacted = false;
         gameObject.SetActive(false);
     }
 }
