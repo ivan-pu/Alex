@@ -24,7 +24,9 @@ public class NumpadBack : MonoBehaviour
             itembeinginteracted = hit.collider.gameObject;
             if (Input.GetMouseButtonUp(0) && this.gameObject == itembeinginteracted)
             {
-                NumboxController.thenumber = NumboxController.thenumber.Substring(0, NumboxController.thenumber.Length - 1);
+                if (!(NumboxController.thenumber.Length <= 0)){
+                    NumboxController.thenumber = NumboxController.thenumber.Substring(0, NumboxController.thenumber.Length - 1);
+                }
             }
         }
     }

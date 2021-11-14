@@ -6,6 +6,9 @@ using TMPro;
 public class NumboxController : MonoBehaviour
 {
     public static string thenumber;
+    [SerializeField]
+    private string password;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,7 @@ public class NumboxController : MonoBehaviour
             thenumber = thenumber.Substring(0, 4);
         }
         this.gameObject.GetComponent<TextMeshPro>().text = thenumber;
-        if (thenumber == "0907"){
+        if (thenumber == password){
             DoorController.gotKey = true;
         }
     }
