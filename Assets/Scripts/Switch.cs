@@ -22,12 +22,17 @@ public class Switch : MonoBehaviour
 
     private float cooldownTimer = 0f;
 
+    private Vector3 defaultPosition;
+    private Quaternion defaultRotation;
+
 
     // Start is called before the first frame update
     void Start()
     {
         GetView();
         glitchEffect = this.gameObject.GetComponent<GlitchImageEffect>();
+        defaultPosition = this.transform.parent.position;
+        defaultRotation = this.transform.parent.rotation;
     }
 
     // Update is called once per frame
@@ -62,6 +67,9 @@ public class Switch : MonoBehaviour
             gender = (-1) * gender;
             timeEplapsed = 0f;
             cooldownTimer = 3f;
+            // reset position to default
+            this.transform.parent.position = defaultPosition;
+            this.transform.parent.rotation = defaultRotation;
         }
     }
     void GetView()
