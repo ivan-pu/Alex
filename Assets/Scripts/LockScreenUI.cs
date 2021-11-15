@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhoneUI : MonoBehaviour
+public class LockScreenUI : MonoBehaviour
 {
+    [SerializeField]
+
+    private GameObject attachedObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +24,7 @@ public class PhoneUI : MonoBehaviour
             Camera.main.GetComponentInParent<Crouch>().enabled = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E)){
+        if (Input.GetKeyDown(KeyCode.Escape)){
             backtoNormal();
         }
     }
@@ -32,7 +35,7 @@ public class PhoneUI : MonoBehaviour
         Camera.main.GetComponent<FirstPersonLook>().enabled = true;
         Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
         Camera.main.GetComponentInParent<Crouch>().enabled = true;
-        GameObject.Find("Boy's Phone").GetComponent<Interactable>().interacted = false;
+        attachedObject.GetComponent<Interactable>().interacted = false;
         gameObject.SetActive(false);
     }
 }
