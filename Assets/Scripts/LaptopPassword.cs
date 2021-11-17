@@ -23,7 +23,7 @@ public class LaptopPassword : MonoBehaviour
     }
 
     public void checkPassword(){
-        if(passwordField.text == password){
+        if(passwordField.text.ToUpper() == password){
             disableParent.SetActive(false);
         }
     }

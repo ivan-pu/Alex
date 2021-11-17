@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class DoorController : MonoBehaviour
 {
-    public static bool gotKey;
+    public bool gotKey;
 
     private Animation doorAnim;
     private BoxCollider doorCollider;

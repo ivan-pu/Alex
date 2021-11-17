@@ -24,7 +24,7 @@ public class NumpadC : MonoBehaviour
             itembeinginteracted = hit.collider.gameObject;
             if (Input.GetMouseButtonUp(0) && this.gameObject == itembeinginteracted)
             {
-                NumboxController.thenumber = "";
+                this.transform.parent.GetComponentInChildren<NumboxController>().thenumber = "";
             }
         }
     }

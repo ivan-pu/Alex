@@ -24,7 +24,7 @@ public class Numpad5 : MonoBehaviour
             itembeinginteracted = hit.collider.gameObject;
             if (Input.GetMouseButtonUp(0) && this.gameObject == itembeinginteracted)
             {
-                NumboxController.thenumber += "5";
+                this.transform.parent.GetComponentInChildren<NumboxController>().thenumber += "5";
             }
         }
     }

@@ -5,14 +5,17 @@ using TMPro;
 
 public class NumboxController : MonoBehaviour
 {
-    public static string thenumber;
+    public string thenumber;
     [SerializeField]
     private string password;
+
+    private DoorController door;
     
     // Start is called before the first frame update
     void Start()
     {
         thenumber = "";
+        door = this.transform.parent.parent.parent.GetComponentInChildren<DoorController>();
     }
 
     // Update is called once per frame
@@ -23,7 +26,7 @@ public class NumboxController : MonoBehaviour
         }
         this.gameObject.GetComponent<TextMeshPro>().text = thenumber;
         if (thenumber == password){
-            DoorController.gotKey = true;
+            door.gotKey = true;
         }
     }
 }

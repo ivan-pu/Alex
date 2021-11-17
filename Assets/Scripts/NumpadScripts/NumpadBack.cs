@@ -8,10 +8,12 @@ public class NumpadBack : MonoBehaviour
 
     private GameObject itembeinginteracted;
 
+    private NumboxController numbox;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        numbox = this.transform.parent.GetComponentInChildren<NumboxController>();
     }
 
     // Update is called once per frame
@@ -24,8 +26,8 @@ public class NumpadBack : MonoBehaviour
             itembeinginteracted = hit.collider.gameObject;
             if (Input.GetMouseButtonUp(0) && this.gameObject == itembeinginteracted)
             {
-                if (!(NumboxController.thenumber.Length <= 0)){
-                    NumboxController.thenumber = NumboxController.thenumber.Substring(0, NumboxController.thenumber.Length - 1);
+                if (!(numbox.thenumber.Length <= 0)){
+                    numbox.thenumber = numbox.thenumber.Substring(0, numbox.thenumber.Length - 1);
                 }
             }
         }

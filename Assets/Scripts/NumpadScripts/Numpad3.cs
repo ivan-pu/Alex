@@ -24,7 +24,7 @@ public class Numpad3 : MonoBehaviour
             itembeinginteracted = hit.collider.gameObject;
             if (Input.GetMouseButtonUp(0) && this.gameObject == itembeinginteracted)
             {
-                NumboxController.thenumber += "3";
+                this.transform.parent.GetComponentInChildren<NumboxController>().thenumber += "3";
             }
         }
     }
