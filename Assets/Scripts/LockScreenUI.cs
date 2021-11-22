@@ -35,7 +35,7 @@ public class LockScreenUI : MonoBehaviour
         Camera.main.GetComponent<FirstPersonLook>().enabled = true;
         Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
         Camera.main.GetComponentInParent<Crouch>().enabled = true;
-        attachedObject.GetComponent<Interactable>().interacted = false;
+        if (attachedObject) attachedObject.GetComponent<Interactable>().interacted = false;
         gameObject.SetActive(false);
     }
 }

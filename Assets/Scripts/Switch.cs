@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Switch : MonoBehaviour
 {
-    private int gender = 1;
+    private bool gender = true;
     [SerializeField]
     private GameObject boyView;
     [SerializeField]
@@ -64,22 +64,23 @@ public class Switch : MonoBehaviour
         timeEplapsed += Time.deltaTime;
         if (timeEplapsed >= switchTime)
         {
-            gender = (-1) * gender;
+            gender = !gender;
             timeEplapsed = 0f;
             cooldownTimer = 3f;
             // reset position to default
             this.transform.parent.position = defaultPosition;
             this.transform.parent.rotation = defaultRotation;
+            PixelCrushers.DialogueSystem.Sequencer.Message("Switched");
         }
     }
     void GetView()
     {
-        if (gender >= 1)
+        if (gender)
         {
             boyView.SetActive(true);
             girlView.SetActive(false);
         }
-        if (gender <= -1)
+        if (!gender)
         {
             boyView.SetActive(false);
             girlView.SetActive(true);
