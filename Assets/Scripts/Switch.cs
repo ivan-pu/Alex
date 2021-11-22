@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Switch : MonoBehaviour
 {
-    private bool gender = true;
+    public bool gender = true;
     [SerializeField]
     private GameObject boyView;
     [SerializeField]
@@ -71,6 +71,7 @@ public class Switch : MonoBehaviour
             this.transform.parent.position = defaultPosition;
             this.transform.parent.rotation = defaultRotation;
             PixelCrushers.DialogueSystem.Sequencer.Message("Switched");
+            PixelCrushers.DialogueSystem.DialogueManager.StartConversation(gender ? "Random Switch Dialogue Boy":"Random Switch Dialogue Girl");
         }
     }
     void GetView()

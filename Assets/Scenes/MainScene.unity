@@ -7119,6 +7119,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -0.77575636
       objectReference: {fileID: 0}
+    - target: {fileID: 4773869515896368, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4852327245166008, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -0.77575636
@@ -7133,7 +7137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65792051141156136, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 65792051141156136, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: m_Center.z
@@ -7155,8 +7159,7 @@ PrefabInstance:
       propertyPath: keyGameObject
       value: 
       objectReference: {fileID: 1039172138}
-    m_RemovedComponents:
-    - {fileID: 65792051141156136, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
 --- !u!4 &554942961 stripped
 Transform:
@@ -9479,7 +9482,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &688116911
 MonoBehaviour:
@@ -13859,7 +13862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65792051141156136, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 65792051141156136, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: m_Center.z
@@ -13881,8 +13884,7 @@ PrefabInstance:
       propertyPath: keyGameObject
       value: 
       objectReference: {fileID: 1039172138}
-    m_RemovedComponents:
-    - {fileID: 65792051141156136, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
 --- !u!4 &1041459950 stripped
 Transform:
@@ -15168,15 +15170,15 @@ RectTransform:
   m_GameObject: {fileID: 1133147276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 0.82500005, y: 0.82500005, z: 0.82500005}
   m_Children: []
   m_Father: {fileID: 688116910}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 182.49998, y: -2.5000181}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0.000026703, y: 0.000011444}
+  m_SizeDelta: {x: 43.4331, y: 41.4959}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1133147278
 MonoBehaviour:
@@ -15200,12 +15202,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MaxSize: 49
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -15339,8 +15341,16 @@ PrefabInstance:
       value: First Person Controller
       objectReference: {fileID: 0}
     - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_RootOrder
@@ -16817,7 +16827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1243122232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18150,8 +18160,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb95c8cdf9efe548bd5589251b39e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boyView: {fileID: 1183357389}
-  girlView: {fileID: 1256302895}
+  gender: 1
+  boyView: {fileID: 1256302895}
+  girlView: {fileID: 1183357389}
   ProgressRoot: {fileID: 2021625833}
   ProgressRing: {fileID: 1544681280}
 --- !u!1001 &1339438079
@@ -19234,6 +19245,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0378f60125b1eee449349a04c256f5b0, type: 3}
+--- !u!1 &1404416831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1437824919343122, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
+  m_PrefabInstance: {fileID: 554942960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1404416834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404416831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 8
+  condition:
+    luaConditions:
+    - Variable["HadDoorConversation"] == false
+    questConditions: []
+    acceptedTags:
+    - Player
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: Door Conversation Girl Door
+  conversationConversant: {fileID: 0}
+  conversationActor: {fileID: 0}
+  startConversationEntryID: -1
+  exclusive: 1
+  replace: 0
+  skipIfNoValidEntries: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: e91c7d5b08ad5594585aaacdf85661b9, type: 2}
 --- !u!1001 &1412170729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21895,7 +21981,7 @@ RectTransform:
   m_GameObject: {fileID: 1544681278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.72, y: 0.72, z: 0.72}
+  m_LocalScale: {x: 0.36, y: 0.36, z: 0.36}
   m_Children: []
   m_Father: {fileID: 2021625834}
   m_RootOrder: 0
@@ -24599,6 +24685,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5834530853276549768, guid: e7b1f3d6fbda5f645841b8beb87e5ac5, type: 3}
   m_PrefabInstance: {fileID: 1842235919}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1842453747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1437824919343122, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
+  m_PrefabInstance: {fileID: 1041459949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1842453750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842453747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 8
+  condition:
+    luaConditions:
+    - Variable["HadDoorConversation"] == false
+    questConditions: []
+    acceptedTags:
+    - Player
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: Door Conversation Boy Door
+  conversationConversant: {fileID: 0}
+  conversationActor: {fileID: 0}
+  startConversationEntryID: -1
+  exclusive: 1
+  replace: 0
+  skipIfNoValidEntries: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: e91c7d5b08ad5594585aaacdf85661b9, type: 2}
 --- !u!1001 &1843617765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25807,23 +25968,15 @@ MonoBehaviour:
   - guid: 60553863-bb15-409e-ac8b-9e13ef5ed4f7
     onExecute:
       m_PersistentCalls:
+        m_Calls: []
+  - guid: 5c2819ff-4919-437f-8d40-da4b72987ea1
+    onExecute:
+      m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2009526379}
-          m_TargetAssemblyTypeName: LockScreenUI, Assembly-CSharp
+          m_TargetAssemblyTypeName: StartingLock, Assembly-CSharp
           m_MethodName: backtoNormal
           m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2009526377}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -27480,10 +27633,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2009526377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f74f3d6eb561e92408d84d31c6eebcc6, type: 3}
+  m_Script: {fileID: 11500000, guid: dc0df484e38e57c4287fce2b7ea69092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachedObject: {fileID: 0}
 --- !u!1 &2013451512 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2294487037695879717, guid: 1d4f5bc6f519ca44bb8ae9a808aab6a7, type: 3}
@@ -27633,11 +27785,11 @@ RectTransform:
   m_Father: {fileID: 1132241398}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0.000061035156, y: 201}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 1, y: 0}
 --- !u!1 &2026967495
 GameObject:
   m_ObjectHideFlags: 0
@@ -29206,12 +29358,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.subtitleSettings.minSubtitleSeconds
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.inputSettings.cancelConversation.key
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.subtitleCharsPerSecond
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.alertSettings.allowAlertsDuringConversations
