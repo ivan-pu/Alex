@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PixelCrushers.DialogueSystem;
 
 public class LaptopPassword : MonoBehaviour
 {
@@ -10,7 +11,11 @@ public class LaptopPassword : MonoBehaviour
     [SerializeField]
     private GameObject disableParent;
     [SerializeField]
-    private string password;
+    private string password1;
+    [SerializeField]
+    private string password2;
+    [SerializeField]
+    private string password3;
     [SerializeField]
     private GameObject wrongPasswordMessage;
     // Start is called before the first frame update
@@ -27,10 +32,17 @@ public class LaptopPassword : MonoBehaviour
     }
 
     public void checkPassword(){
-        if(passwordField.text.ToUpper() == password){
+        if(checkHelper()){
             disableParent.SetActive(false);
+            this.gameObject.GetComponent<DialogueSystemTrigger>().OnUse();
         } else {
             wrongPasswordMessage.SetActive(true);
         }
+    }
+
+    private bool checkHelper(){
+        return ((password1 != null && passwordField.text.ToUpper() == password1) 
+        || (password2 != null && passwordField.text.ToUpper() == password2) 
+        || (password3 != null && passwordField.text.ToUpper() == password3));
     }
 }

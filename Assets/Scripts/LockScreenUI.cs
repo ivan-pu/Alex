@@ -23,10 +23,6 @@ public class LockScreenUI : MonoBehaviour
             Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             Camera.main.GetComponentInParent<Crouch>().enabled = false;
         }
-
-        if (Input.GetKeyDown(KeyCode.Escape)){
-            backtoNormal();
-        }
     }
 
     public void backtoNormal()
