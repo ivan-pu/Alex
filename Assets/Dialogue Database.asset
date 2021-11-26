@@ -8541,9 +8541,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "I don\u2019t want to admit it but it looks pretty much like the door
-          to my room. Yes, it is the door to my room. I once spilled coffee on it
-          and the spot is still there."
+        value: Yes, it is the door to my room. Any problems?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -8614,8 +8612,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: So it seems I can only see your room if I am in the body. What is
-          your password?
+        value: Nothing. Good coffee stain. So it seems I can only see your room if
+          I am in the body. What is your password?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
