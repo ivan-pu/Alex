@@ -18,7 +18,6 @@ public class StartingLock : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Camera.main.GetComponent<FirstPersonLook>().enabled = false;
             Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            Camera.main.GetComponentInParent<Crouch>().enabled = false;
         }
     }
 
@@ -27,7 +26,6 @@ public class StartingLock : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Camera.main.GetComponent<FirstPersonLook>().enabled = true;
         Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
-        Camera.main.GetComponentInParent<Crouch>().enabled = true;
         gameObject.SetActive(false);
     }
 }

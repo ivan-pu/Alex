@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 11421968}
   - component: {fileID: 11455538}
   m_Layer: 5
-  m_Name: Basic Standard UI Selector Elements
+  m_Name: Basic Standard UI Selector Elements 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

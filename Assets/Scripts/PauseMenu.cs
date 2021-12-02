@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
 
     private static bool paused = false;
     // Start is called before the first frame update
+
+    private CursorLockMode previous;
     void Start()
     {
 
@@ -27,10 +29,10 @@ public class PauseMenu : MonoBehaviour
 
     public void pause()
     {
+        previous = Cursor.lockState;
         Cursor.lockState = CursorLockMode.None;
         Camera.main.GetComponent<FirstPersonLook>().enabled = false;
         Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        Camera.main.GetComponentInParent<Crouch>().enabled = false;
         pauseMenu.SetActive(true);
         DialogueManager.Pause();
         paused = true;
@@ -38,10 +40,9 @@ public class PauseMenu : MonoBehaviour
     public void resume()
     {
         pauseMenu.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = previous;
         Camera.main.GetComponent<FirstPersonLook>().enabled = true;
         Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
-        Camera.main.GetComponentInParent<Crouch>().enabled = true;
         DialogueManager.Unpause();
         paused = false;
 

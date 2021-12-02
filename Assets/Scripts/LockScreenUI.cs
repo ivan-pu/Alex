@@ -21,7 +21,6 @@ public class LockScreenUI : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Camera.main.GetComponent<FirstPersonLook>().enabled = false;
             Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            Camera.main.GetComponentInParent<Crouch>().enabled = false;
             Camera.main.GetComponent<Switch>().enabled = false;
         }
     }
@@ -31,9 +30,7 @@ public class LockScreenUI : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Camera.main.GetComponent<FirstPersonLook>().enabled = true;
         Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
-        Camera.main.GetComponentInParent<Crouch>().enabled = true;
         Camera.main.GetComponent<Switch>().enabled = true;
-        if (attachedObject) attachedObject.GetComponent<Interactable>().interacted = false;
         gameObject.SetActive(false);
     }
 }
