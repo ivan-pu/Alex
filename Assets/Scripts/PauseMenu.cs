@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using PixelCrushers.DialogueSystem;
 
 public class PauseMenu : MonoBehaviour
@@ -45,9 +46,13 @@ public class PauseMenu : MonoBehaviour
         Camera.main.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
         DialogueManager.Unpause();
         paused = false;
-
     }
 
+    public void startmenu(){
+        resume();
+        DialogueManager.StopConversation();
+        SceneManager.LoadScene("StartMenu");
+    }
     public void quit(){
         Debug.Log("Quit");
         Application.Quit();
