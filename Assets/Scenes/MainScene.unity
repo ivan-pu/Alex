@@ -12531,7 +12531,7 @@ MonoBehaviour:
   disableParent: {fileID: 2005640031}
   password1: ROSEISAROSE
   password2: ROSEISAROSEISAROSEISAROSE
-  password3: 
+  password3: AROSEISAROSE
   wrongPasswordMessage: {fileID: 1865826270}
 --- !u!114 &563262299
 MonoBehaviour:
@@ -25681,6 +25681,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 136877096903737240, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 136877096903737240, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 67202e17b1246884a97b68879e2a74ef, type: 2}
@@ -26579,7 +26583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1183357390
 Transform:
   m_ObjectHideFlags: 0

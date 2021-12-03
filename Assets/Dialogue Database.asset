@@ -10449,7 +10449,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 3
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -10501,8 +10501,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 70
+        x: 37
+        y: 72
         width: 160
         height: 30
     - id: 2
@@ -10520,7 +10520,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 4
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -10719,7 +10719,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hello? Excuse me? Is that me? You drew me? And post it online?
+        value: You drew me and posted it online?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -10759,8 +10759,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 70
+        x: 39
+        y: 67
         width: 160
         height: 30
     - id: 2
@@ -10861,7 +10861,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Exactly. I am famous here, Ok?
+        value: Yeah. I am famous.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -10901,8 +10901,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 170
+        x: 59
+        y: 160
         width: 160
         height: 30
     - id: 4
@@ -10932,8 +10932,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Ewww. That makes sense. I kind of see why we are here sharing this
-          damn body.
+        value: Ah, I see. It makes sense. I kind of see why we are here sharing this
+          body.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -10967,8 +10967,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 220
+        x: 49
+        y: 231
         width: 160
         height: 30
     entryGroups: []
@@ -11532,7 +11532,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Clever meI feel sorry for you. TG was an adorable dog.
+        value: Clever clever me! I feel sorry for you. TG was an adorable dog.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
