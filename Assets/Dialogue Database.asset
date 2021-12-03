@@ -11282,7 +11282,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetDialoguePanel(false); Delay(3);
+        value: "SetContinueMode(false);\nSetDialoguePanel(false); \nDelay(3);\n"
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid

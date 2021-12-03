@@ -13,7 +13,7 @@ public class Switch : MonoBehaviour
     private GameObject ProgressRoot;
     [SerializeField]
     private Image ProgressRing;
-    private float switchTime = 1.2f;
+    private float switchTime = 2f;
     private float timeEplapsed = 0f;
 
     private const float interferenceValue = 400;
@@ -21,6 +21,9 @@ public class Switch : MonoBehaviour
     private GlitchImageEffect glitchEffect;
 
     private float cooldownTimer = 0f;
+    
+    [SerializeField]
+    private AudioSource switchSound;
 
 
     // Start is called before the first frame update
@@ -43,12 +46,14 @@ public class Switch : MonoBehaviour
             ProgressRoot.SetActive(true);
             glitchEffect.enabled = true;
             TryIncrementAndComplete();
+            if(!switchSound.isPlaying) switchSound.Play();
         }
         else
         {
             ProgressRoot.SetActive(false);
             glitchEffect.enabled = false;
             timeEplapsed = 0f;
+            switchSound.Stop();
         }
         ProgressRing.fillAmount = timeEplapsed / switchTime;
         glitchEffect.interference = interferenceValue * (timeEplapsed / switchTime);

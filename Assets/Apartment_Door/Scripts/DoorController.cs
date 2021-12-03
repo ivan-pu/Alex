@@ -26,6 +26,7 @@ public class DoorController : MonoBehaviour
         {
             doorAnim.Play("Door_Open");
             doorOpened = true;
+            this.GetComponent<AudioSource>().Play();
             doorCollider.enabled = false;
         }
     }
