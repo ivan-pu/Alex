@@ -20530,7 +20530,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4526663705003636182, guid: e6e34f229459c17418ab4b333b59709f, type: 3}
       propertyPath: m_Name
-      value: interior.114
+      value: knife
       objectReference: {fileID: 0}
     - target: {fileID: 5223221634881953777, guid: e6e34f229459c17418ab4b333b59709f, type: 3}
       propertyPath: m_RootOrder

@@ -3692,7 +3692,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(B_oh)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 13
@@ -3891,7 +3891,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Yeah, and I don't like fine arts. It looked... hopeless.
+        value: Yeah, and I don't like fine arts.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
